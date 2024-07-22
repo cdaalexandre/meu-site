@@ -1,15 +1,43 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>CRUD com Armazenamento Local e Segurança</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Bem-vindo ao meu site!</h1>
-    <p>Este é um site estático hospedado no GitHub Pages.</p>
-    <button id="meu-botao">Clique aqui</button>
-    <script src="script.js"></script>
+  <h1>CRUD com Armazenamento Local, Suporte a Hardware e Segurança</h1>
+  
+  <div class="form-container">
+    <h2>Adicionar Item</h2>
+    <form id="add-form">
+      <label for="name">Nome:</label>
+      <input type="text" id="name" required>
+      <label for="description">Descrição:</label>
+      <textarea id="description" required></textarea>
+      <button type="submit">Adicionar</button>
+    </form>
+    <button id="capture-photo">Capturar Foto</button>
+    <video id="video" width="320" height="240" autoplay></video>
+    <canvas id="canvas" style="display:none;"></canvas>
+  </div>
+
+  <div class="items-container">
+    <h2>Itens</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Descrição</th>
+          <th>Foto</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="item-list">
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
